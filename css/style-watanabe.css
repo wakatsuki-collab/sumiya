@@ -1,0 +1,661 @@
+/* ===================================================
+   style-watanabe.css
+   渡邉有優美 × 角谷リョウ 対談LP専用スタイル
+   index-v4.css をベースに、ヘッドセクションをカスタム
+   =================================================== */
+
+/* ===== CUSTOM PROPERTIES (Green Palette) ===== */
+:root {
+  --color-primary:     #1A5C38;
+  --color-primary-mid: #2E7D52;
+  --color-accent:      #E65100;
+  --color-accent-hover:#BF4000;
+  --color-dark:        #1a1a1a;
+  --color-text:        #333333;
+  --color-muted:       #666666;
+  --color-bg:          #FAFAF8;
+  --color-green-light: #E8F5E9;
+}
+
+/* ===== HERO — Full-width stacked layout ===== */
+/*
+ * 写真が16:9横長で二人が左右に並ぶため、
+ * 常に写真を全幅で上に表示 → テキストを下に配置。
+ * PC幅では写真の下部にグラデーションをかけて
+ * テキストが自然に続くようにする。
+ */
+
+.hero-watanabe {
+  position: relative;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+/* -- Event Badge -- */
+.hero-badge-w {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background: var(--color-accent);
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 32px;
+  border-radius: 100px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  opacity: 0;
+  animation: wFadeInDown 0.6s ease 0.3s forwards;
+}
+
+/* -- Stacked layout (always vertical) -- */
+.hero-inner-w {
+  display: flex;
+  flex-direction: column;
+}
+
+/* -- Photo area (full-width, aspect-ratio preserved) -- */
+.hero-photo-w {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-photo-w img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* グラデーション不要（名前バーが写真の直下に来るため） */
+
+/* -- Speaker name bar (below photo, not overlaid) -- */
+.hero-speaker-bar {
+  width: 100%;
+  background: var(--color-primary);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: -4px; /* 写真との隙間をなくす */
+  padding: 12px 0;
+}
+
+.hero-speaker-bar .speaker-item {
+  color: #fff;
+}
+
+/* 左の人（渡邉さん）→ 左カラムの中心やや左寄り */
+.hero-speaker-bar .speaker-item:first-child {
+  text-align: center;
+  padding-left: 5%;
+}
+
+/* 右の人（角谷さん）→ 右カラムの中心やや右寄り */
+.hero-speaker-bar .speaker-item:last-child {
+  text-align: center;
+  padding-right: 5%;
+}
+
+.hero-speaker-bar .speaker-item .name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+}
+
+.hero-speaker-bar .speaker-item .role {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+/* -- Text area (below photo) -- */
+.hero-text-w {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 36px 40px 48px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* -- Main catchphrase -- */
+.hero-catch-w {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: wFadeInUp 0.6s ease 0.5s forwards;
+}
+
+.hero-catch-w .line2 {
+  display: inline-block;
+  position: relative;
+}
+
+.hero-catch-w .line2::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), transparent);
+}
+
+/* -- Speaker names -- */
+.hero-speakers-w {
+  margin-bottom: 8px;
+  text-align: center;
+  opacity: 0;
+  animation: wFadeIn 0.6s ease 0.7s forwards;
+}
+
+.hero-speakers-w .names {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  color: var(--color-muted);
+}
+
+.hero-speakers-w .names .cross {
+  color: var(--color-accent);
+  font-weight: 700;
+  padding: 0 4px;
+}
+
+.hero-speakers-w .event-type {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 4px;
+}
+
+/* -- Benefits list -- */
+.hero-benefits-w {
+  list-style: none;
+  margin: 20px 0 28px;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+  opacity: 0;
+  animation: wFadeIn 0.6s ease 0.7s forwards;
+}
+
+.hero-benefits-w li {
+  position: relative;
+  padding-left: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  color: var(--color-text);
+  line-height: 2;
+}
+
+.hero-benefits-w li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* -- CTA button -- */
+.hero-cta-w {
+  width: 100%;
+  max-width: 420px;
+  opacity: 0;
+  animation: wFadeInScale 0.6s ease 0.9s forwards;
+}
+
+.hero-cta-w .cta-btn-w {
+  display: block;
+  width: 100%;
+  background: var(--color-accent);
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 16px rgba(230, 81, 0, 0.25);
+  cursor: pointer;
+  border: none;
+}
+
+.hero-cta-w .cta-btn-w:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(230, 81, 0, 0.35);
+}
+
+.hero-cta-w .cta-sub-w {
+  font-size: 12px;
+  color: var(--color-muted);
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes wFadeInDown {
+  from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes wFadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes wFadeInScale {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Smartphone (767px以下) */
+@media (max-width: 767px) {
+  .hero-photo-w {
+    max-height: 300px;
+  }
+
+  .hero-badge-w {
+    top: 12px;
+    font-size: 12px;
+    padding: 5px 16px;
+  }
+
+  .hero-speaker-bar {
+    height: 56px;
+    padding: 0 12px;
+    gap: 24px;
+  }
+
+  .hero-speaker-bar .speaker-item .name { font-size: 13px; }
+  .hero-speaker-bar .speaker-item .role { font-size: 10px; }
+
+  .hero-text-w {
+    padding: 24px 20px 32px;
+  }
+
+  .hero-catch-w {
+    font-size: 1.5rem;
+  }
+
+  .hero-speakers-w .event-type { font-size: 17px; }
+
+  .hero-benefits-w li { font-size: 13px; }
+
+  .hero-cta-w {
+    max-width: 100%;
+  }
+}
+
+/* ===== Hero date label ===== */
+.hero-date-w {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  animation: wFadeIn 0.6s ease 0.8s forwards;
+}
+
+/* ===== Form date label (フォーム上の開催日時) ===== */
+.page-watanabe .form-date-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  letter-spacing: 0.03em;
+}
+
+/* ===== Speaker photo — 渡邉さんの顔が切れないよう個別調整 ===== */
+/* 両カード共通：写真枠を少し広げる */
+.page-watanabe .speaker-photo-col {
+  flex: 0 0 260px;
+}
+
+/* 渡邉さんだけ位置を右寄りに見せる（顔の右が切れない） */
+.page-watanabe .speaker-card.main-speaker .speaker-photo-col img {
+  object-position: 60% 15%;
+}
+
+/* ===== Speaker book cover larger ===== */
+.page-watanabe .speaker-book-row {
+  gap: 18px;
+  padding: 16px 18px;
+}
+
+.page-watanabe .speaker-book-img {
+  width: 120px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.page-watanabe .speaker-book-title {
+  font-size: 1.15rem;
+}
+
+.page-watanabe .speaker-book-label {
+  font-size: 0.75rem;
+}
+
+.page-watanabe .speaker-book-pub {
+  font-size: 0.8rem;
+}
+
+/* ===== Overrides to harmonize rest of page with green palette ===== */
+
+/* Override top-bar */
+.page-watanabe .top-bar {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-mid), var(--color-primary));
+  color: #E8F5E9;
+}
+
+/* Override urgency bar */
+.page-watanabe .urgency-bar {
+  background: linear-gradient(90deg, #BF4000, var(--color-accent), #FF7043, var(--color-accent), #BF4000);
+  background-size: 300% auto;
+  animation: goldShimmer 4s ease infinite;
+  color: #fff;
+}
+
+.page-watanabe .urgency-bar .blink-dot {
+  background: #fff;
+}
+
+/* Section title override for green (白背景セクションのみ) */
+.page-watanabe .section-title {
+  color: var(--color-primary);
+}
+
+/* 緑背景セクション内のタイトルは白のまま */
+.page-watanabe .event-section .section-title,
+.page-watanabe .speakers-section .section-title,
+.page-watanabe .narrative-section.dark .section-title {
+  color: #fff;
+}
+
+.page-watanabe .text-gold {
+  color: var(--color-accent);
+}
+
+/* Highlight override */
+.page-watanabe .highlight-yellow {
+  background: linear-gradient(transparent 60%, rgba(26, 92, 56, 0.12) 60%);
+  color: var(--color-primary);
+}
+
+/* Speakers section green */
+.page-watanabe .speakers-section {
+  background: linear-gradient(180deg, var(--color-primary), var(--color-primary-mid));
+}
+
+/* 緑背景セクション内のハイライトは白＋オレンジ系で目立たせる */
+.page-watanabe .speakers-section .highlight-yellow,
+.page-watanabe .event-section .highlight-yellow,
+.page-watanabe .narrative-section.dark .highlight-yellow {
+  background: linear-gradient(transparent 60%, rgba(255, 255, 255, 0.2) 60%);
+  color: #FFB74D;
+}
+
+/* Speaker card borders */
+.page-watanabe .speaker-card.main-speaker {
+  border-color: var(--color-accent);
+}
+
+.page-watanabe .speaker-tag {
+  background: rgba(230, 81, 0, 0.15);
+  color: #FF7043;
+}
+
+.page-watanabe .speaker-number,
+.page-watanabe .speaker-main-label {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Benefit list */
+.page-watanabe .benefit-list li {
+  border-left-color: var(--color-primary);
+}
+
+.page-watanabe .benefit-list li::before {
+  color: var(--color-primary);
+}
+
+/* Event section green */
+.page-watanabe .event-section {
+  background: linear-gradient(135deg, var(--color-primary-mid), #3a9d6a);
+}
+.page-watanabe .event-section .session-card {
+  background: rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.page-watanabe .session-num {
+  background: linear-gradient(135deg, var(--color-accent), #BF4000);
+}
+
+/* Guarantee / bonus */
+.page-watanabe .guarantee-box {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 20px rgba(26, 92, 56, 0.1);
+}
+
+.page-watanabe .guarantee-badge {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-mid));
+  color: #fff;
+}
+
+.page-watanabe .bonus-num {
+  background: linear-gradient(135deg, var(--color-primary-mid), var(--color-primary));
+}
+
+/* Theme cards */
+.page-watanabe .theme-card:hover {
+  border-color: rgba(26, 92, 56, 0.3);
+}
+
+.page-watanabe .theme-card h4 {
+  color: var(--color-primary);
+}
+
+/* Reason cards */
+.page-watanabe .reason-card {
+  border-top-color: var(--color-primary);
+}
+
+.page-watanabe .reason-num {
+  color: var(--color-accent);
+}
+
+/* Path cards */
+.page-watanabe .path-card.right {
+  border-color: var(--color-primary-mid);
+  background: linear-gradient(135deg, var(--color-green-light), #f0fff0);
+}
+
+.page-watanabe .path-card.right h4 {
+  color: var(--color-primary);
+}
+
+/* FAQ */
+.page-watanabe .faq-q::before {
+  background: linear-gradient(135deg, var(--color-primary-mid), var(--color-primary));
+}
+
+/* Registration form override */
+.page-watanabe .reg-form-wrap {
+  background: linear-gradient(135deg, #1A3C28, #1A5C38);
+  border-color: rgba(230, 81, 0, 0.35);
+}
+
+.page-watanabe .reg-form-wrap input[type="text"] {
+  border-color: rgba(230, 81, 0, 0.5);
+}
+
+.page-watanabe .reg-form-wrap input[type="submit"] {
+  background: linear-gradient(135deg, var(--color-accent), #FF7043);
+}
+
+.page-watanabe .reg-form-note a {
+  color: #FF7043;
+}
+
+/* Floating CTA override */
+.page-watanabe .floating-cta {
+  background: linear-gradient(135deg, #0f2618, #1A3C28);
+  border-top-color: rgba(230, 81, 0, 0.5);
+}
+
+.page-watanabe .floating-cta-label {
+  color: #A5D6A7;
+}
+
+.page-watanabe .floating-cta-input {
+  border-color: rgba(230, 81, 0, 0.4);
+}
+
+.page-watanabe .floating-cta-input:focus {
+  border-color: var(--color-accent);
+}
+
+.page-watanabe .floating-cta-submit {
+  background: linear-gradient(135deg, var(--color-accent), #FF7043);
+  color: #fff;
+}
+
+/* Footer */
+.page-watanabe .footer {
+  background: #0f2618;
+}
+
+.page-watanabe .footer a:hover {
+  color: #A5D6A7;
+}
+
+/* Kiyaku */
+.page-watanabe .kiyaku {
+  background: #0f2618;
+}
+
+/* Narrative dark */
+.page-watanabe .narrative-section.dark {
+  background: linear-gradient(135deg, var(--color-primary-mid), #3a9d6a);
+}
+
+/* Big free text */
+.page-watanabe .narrative-text .big-free {
+  color: var(--color-primary);
+}
+
+/* Steps list */
+.page-watanabe .steps-list li {
+  border-left-color: var(--color-primary);
+}
+
+.page-watanabe .steps-list li .step-num {
+  color: var(--color-accent);
+}
+
+/* Webinar list */
+.page-watanabe .webinar-list li::before {
+  color: var(--color-primary-mid);
+}
+
+/* Imagine list */
+.page-watanabe .imagine-list li::before {
+  color: var(--color-primary);
+}
+
+/* PS section */
+.page-watanabe .ps-section .ps-label {
+  color: var(--color-primary);
+}
+
+/* Organizer */
+.page-watanabe .organizer-logo {
+  color: var(--color-primary);
+}
+
+/* Section divider */
+.page-watanabe .section-divider {
+  background: linear-gradient(90deg, transparent, rgba(26, 92, 56, 0.2), transparent);
+}
+
+/* Problem callout emphasis */
+.page-watanabe .problem-callout .emphasis {
+  color: var(--color-primary);
+}
+
+/* Speaker credentials */
+.page-watanabe .speaker-credentials li::before {
+  color: #A5D6A7;
+}
+
+/* Speaker name en */
+.page-watanabe .speaker-name-en {
+  color: #A5D6A7;
+}
+
+/* Speaker book label */
+.page-watanabe .speaker-book-label {
+  color: #A5D6A7;
+}
+
+/* Session brief inside speakers */
+.page-watanabe .speakers-section .session-brief {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.page-watanabe .speakers-section .session-brief .session-theme-tag {
+  background: rgba(230, 81, 0, 0.2);
+  color: #FF7043;
+}
+
+.page-watanabe .speakers-section .session-brief .arrow-text {
+  color: #A5D6A7;
+}
+
+/* CTA section gold line override */
+.page-watanabe .cta-section::before {
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+}
+
+/* Bonus card */
+.page-watanabe .bonus-card {
+  border-color: rgba(26, 92, 56, 0.12);
+}
+
+.page-watanabe .bonus-card h4 {
+  color: var(--color-primary);
+}
+
+/* Guarantee box h3 */
+.page-watanabe .guarantee-box h3 {
+  color: var(--color-primary);
+}

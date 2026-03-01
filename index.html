@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>『捨てる力』が人生を変える｜渡邊有優美×角谷リョウ｜新プロジェクト予告対談</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;600;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,400;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style-v4.css">
+  <link rel="stylesheet" href="css/style-watanabe.css">
+  <style>
+    /* ===== V2 Hero: Full-width banner image ===== */
+    .hero-watanabe-v2 {
+      background: linear-gradient(to right, #E65100, #1a1a1a 20%, #1a1a1a 80%, #2e7d32);
+      text-align: center;
+      padding: 0;
+    }
+    .hero-watanabe-v2 .hero-banner-w {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .hero-watanabe-v2 .hero-banner-w img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .hero-watanabe-v2 .hero-meta-v2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px 28px;
+      padding: 20px 16px 12px;
+      background: #f7f5f0;
+      color: #444;
+      font-size: 0.95rem;
+      font-weight: 500;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    .hero-watanabe-v2 .hero-meta-v2 .icon {
+      margin-right: 4px;
+    }
+    .hero-watanabe-v2 .hero-cta-v2 {
+      padding: 16px 16px 36px;
+      background: #f7f5f0;
+      text-align: center;
+    }
+    .hero-watanabe-v2 .hero-cta-v2 .cta-sub-w {
+      color: #888;
+      font-size: 0.82rem;
+      margin-top: 10px;
+    }
+    /* Hide the original hero elements that are no longer needed */
+    .hero-watanabe-v2 .hero-badge-w,
+    .hero-watanabe-v2 .hero-inner-w {
+      display: none;
+    }
+
+    /* ===== Flexbox form (shared across all registration forms) ===== */
+    .reg-form-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .reg-form-flex .form-email-input {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 1rem;
+      border: 2px solid rgba(255,255,255,0.25);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s;
+      font-family: 'Noto Sans JP', sans-serif;
+      box-sizing: border-box;
+    }
+    .reg-form-flex .form-email-input::placeholder {
+      color: rgba(255,255,255,0.4);
+    }
+    .reg-form-flex .form-email-input:focus {
+      border-color: #FF6D00;
+    }
+    .reg-form-flex .form-submit-btn {
+      width: 100%;
+      padding: 16px 24px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #E65100, #FF6D00);
+      border: none;
+      border-radius: 60px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 20px rgba(230,81,0,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    .reg-form-flex .form-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(230,81,0,0.55);
+    }
+    /* Light background variant (for cta-section) */
+    .reg-form-flex.light .form-email-input {
+      background: #fff;
+      color: #333;
+      border-color: #ccc;
+    }
+    .reg-form-flex.light .form-email-input::placeholder {
+      color: #999;
+    }
+    .reg-form-flex.light .form-email-input:focus {
+      border-color: #E65100;
+    }
+
+    /* PC: bump root font-size so all rem values scale up */
+    @media (min-width: 601px) {
+      html { font-size: 17px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-watanabe-v2 .hero-meta-v2 {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        font-size: 0.88rem;
+      }
+      .reg-form-flex .form-submit-btn {
+        font-size: 1rem;
+        padding: 14px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body class="page-watanabe">
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    フォレスト出版 presents
+  </div>
+
+  <!-- ========== HERO (Banner Version) ========== -->
+  <section class="hero-watanabe hero-watanabe-v2">
+    <div class="hero-banner-w">
+      <picture>
+        <source media="(max-width: 600px)" srcset="images/33sp.jpg">
+        <img src="images/33.jpg" alt="頑張りすぎの日本人に警鐘！『捨てる力』が人生を変える ─ 渡邊有優美×角谷リョウ 新プロジェクト予告対談 3/30(月)20:00〜21:30 公開LIVE">
+      </picture>
+    </div>
+    <div class="hero-meta-v2">
+      <span><span class="icon">📅</span> 2026年3月30日（月）20:00〜21:30 公開LIVE</span>
+      <span><span class="icon">📍</span> オンライン開催</span>
+      <span><span class="icon">💰</span> 完全無料</span>
+    </div>
+    <div class="hero-cta-v2">
+      <form action="https://www.forestpub.co.jp/mm/Register" method="post" class="reg-form-flex light">
+        <input type="hidden" name="UserID" value="forest">
+        <input type="hidden" name="MagazineID" value="13208">
+        <input type="hidden" name="ReferrerID" value="0">
+        <input type="hidden" name="Confirm" value="1">
+        <input type="email" name="Email" maxlength="50" placeholder="メールアドレスを入力" class="form-email-input" required>
+        <input type="submit" value="今すぐ無料登録する →" class="form-submit-btn">
+      </form>
+      <p class="cta-sub-w">完全無料・一度きりのライブ限定配信</p>
+    </div>
+  </section>
+
+  <!-- URGENCY BAR -->
+  <div class="urgency-bar">
+    <span class="blink-dot"></span>
+    【完全無料】一度きりの特別対談ウェビナー
+  </div>
+
+  <!-- ========== 導入：頑張っているのに… ========== -->
+  <section class="problem-section">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center" style="margin-bottom:32px;">頑張っているのに、<br>なぜか人生が前に進まない──</h2>
+      <div class="narrative-text">
+        <p><span class="highlight-yellow">「もっと頑張らなければ」</span></p>
+        <p><span class="highlight-yellow">「まだ足りない」</span></p>
+        <p><span class="highlight-yellow">「休んでいる場合じゃない」</span></p>
+        <p>そう自分に言い聞かせながら、<br>いつの間にか何年もが過ぎていませんか？</p>
+        <p>スケジュールは常に満杯。<br>やることリストは毎朝増えていく一方。<br><span
+            class="highlight-yellow">「いつかゆっくりしよう」</span>と思い続けながら、<br>そのいつかは一向に来ない。</p>
+        <p>そして気づいたら──</p>
+        <p><strong style="font-size:1.15rem;">「これだけ頑張っているのに、<br>なんでこんなに疲れているんだろう？」</strong></p>
+        <p>そんな虚しさを、<br>心のどこかに抱えていませんか？</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== こんな状態に心当たりはありませんか？ ========== -->
+  <section class="solution-section">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center">こんな状態に<br><span class="text-gold serif">心当たりはありませんか？</span></h2>
+      <div class="theme-grid" style="margin-top:32px;">
+        <div class="theme-card">
+          <span class="theme-icon">😓</span>
+          <h4>一生懸命やっているのに、<br>成果がついてこない</h4>
+          <p>「もっとできるはず」と<br>自分を追い込んでいる。</p>
+        </div>
+        <div class="theme-card">
+          <span class="theme-icon">📦</span>
+          <h4>やめられないタスク・人間関係・習慣が山積み</h4>
+          <p>手放したいものがあるのに、<br>捨てる踏ん切りがつかない。</p>
+        </div>
+        <div class="theme-card">
+          <span class="theme-icon">😰</span>
+          <h4>休んでも罪悪感を感じてしまう</h4>
+          <p>「頑張ること」以外の<br>生き方がわからなくなっている。</p>
+        </div>
+        <div class="theme-card">
+          <span class="theme-icon">🔄</span>
+          <h4>頑張るほど空回りする</h4>
+          <p>努力と成果が<br>まったく比例していない。</p>
+        </div>
+      </div>
+      <div class="problem-callout">
+        <p>もしこれらに一つでも当てはまるなら──</p>
+        <p>それは、あなたの頑張り方に問題があるのではありません。</p>
+        <p class="emphasis" style="font-size:clamp(1.2rem,3.5vw,1.6rem);"><span
+            class="highlight-yellow">「頑張ることをやめたほうが、うまくいく」</span><br>という発想が、まだないだけです。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== 「捨てる力」こそが加速装置 ========== -->
+  <section class="narrative-section alt">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center"><span class="highlight-yellow">「捨てる力」</span>こそが、<br>人生最大の加速装置である</h2>
+      <div class="narrative-text">
+        <p>世間では<span class="highlight-yellow">「もっと努力しろ」</span><span class="highlight-yellow">「継続が力だ」</span>と言われ続けます。</p>
+        <p>しかし、本当に成果を出している人たちは、<br>逆のことをやっています。</p>
+      </div>
+      <div class="guarantee-box" style="margin:32px 0;">
+        <h3>成功者は<span class="highlight-yellow">「足す」</span>のではなく<br><span class="highlight-yellow">「引く」</span>ことが圧倒的にうまい。
+        </h3>
+      </div>
+      <div class="narrative-text">
+        <p>不要な仕事を捨てる。<br>消耗する人間関係を手放す。<br><span class="highlight-yellow">「やらなければならない」</span>という<br>思い込みを脱ぎ捨てる。</p>
+        <p><strong>それだけで、エネルギーが解放され、<br>本当に大切なことに集中できるようになる。</strong></p>
+        <p>これは「怠けること」でも「諦めること」でもありません。</p>
+        <p><span class="highlight-yellow">「何を選び、何を捨てるか」</span>を<br>意識的に決める──</p>
+        <p>それが、頑張らなくても成果が出る人の、<br>最大の戦略なのです。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== 二つの視点が交わる ========== -->
+  <section class="narrative-section">
+    <div class="container animate-on-scroll text-center">
+      <h2 class="section-title">二つの視点が交わるとき、<br><span class="text-gold serif">「頑張りすぎる人生」</span>からの<br>脱出口が見えてくる</h2>
+      <div class="narrative-text" style="text-align:left;">
+        <p>渡邉有優美さんが語る<br><span class="highlight-yellow">「純度高く生きる」</span>の哲学</p>
+        <p>× 角谷リョウさんが語る<br><span class="highlight-yellow">「余白が成果を生む設計術」</span></p>
+        <p>この二つの視点が交わるとき、<br><span class="highlight-yellow">「頑張りすぎる人生」</span>からの<br>脱出口が見えてきます。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== 対談者紹介 ========== -->
+  <section class="speakers-section" id="speakers">
+    <div class="container-wide">
+      <h2 class="section-title text-center mb-5">今回の<span class="text-gold">対談者</span>をご紹介します</h2>
+
+      <!-- 角谷リョウ -->
+      <div class="speaker-card animate-on-scroll">
+        <div class="speaker-card-inner">
+          <div class="speaker-photo-col">
+            <img src="images/sumiya.jpg" alt="角谷リョウ">
+            <span class="speaker-main-label">メイン講師</span>
+          </div>
+          <div class="speaker-info-col">
+            <span class="speaker-tag">パフォーマンス × 余白設計 × 睡眠</span>
+            <h3 class="speaker-name">角谷リョウ</h3>
+            <p class="speaker-name-en">Sumiya Ryo</p>
+            <p class="speaker-title-role">パフォーマンスコーチ / 株式会社LIFREE共同創業者 / 睡眠・超回復研究所所長</p>
+            <ul class="speaker-credentials">
+              <li>160社・16万人のパフォーマンスを改善</li>
+              <li>上級睡眠健康指導士 / 日本スポーツ協会公認スポーツ指導者</li>
+              <li>認知行動療法・環境設計ベースの<span class="highlight-yellow">「余白が成果を生む」</span>メソッド確立</li>
+              <li>テレビ・雑誌などメディア出演多数</li>
+            </ul>
+            <p class="speaker-description">
+              大手企業を中心に計160社・累計16万人を超えるビジネスパーソンのパフォーマンスを改善。成果を出し続けるリーダーたちの共通点として、<span
+                class="highlight-yellow">「頑張りすぎない24時間の設計」</span>の重要性に着目。認知行動療法や環境設計をベースにした「余白が成果を生む」メソッドにより、多くのビジネスパーソンの慢性的なパフォーマンス低下を根本解決してきた。
+            </p>
+            <div class="speaker-book-row">
+              <img src="images/sumiyabook.jpg" alt="仕事の質を高める休養力" class="speaker-book-img">
+              <div class="speaker-book-info">
+                <p class="speaker-book-label">著書</p>
+                <p class="speaker-book-title">仕事の質を高める休養力</p>
+                <p class="speaker-book-pub">フォレスト出版</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 渡邉有優美 -->
+      <div class="speaker-card main-speaker animate-on-scroll">
+        <div class="speaker-card-inner">
+          <div class="speaker-photo-col">
+            <img src="images/watanabe.jpeg" alt="渡邉有優美">
+            <span class="speaker-main-label">ゲスト講師</span>
+          </div>
+          <div class="speaker-info-col">
+            <span class="speaker-tag">ヨガ × 捨てる力 × 純度高く生きる</span>
+            <h3 class="speaker-name">渡邉有優美</h3>
+            <p class="speaker-name-en">Watanabe Ayumi</p>
+            <p class="speaker-title-role">ヨガ講師・著者・ギネス世界記録保持者 / 株式会社ARN GLOBAL代表</p>
+            <ul class="speaker-credentials">
+              <li>20年以上・延べ1万人以上にヨガを指導</li>
+              <li>SNS動画累計再生数2億回突破・総フォロワー29万人超</li>
+              <li>ギネス世界記録保持：開脚前屈ポーズ最長保持（1時間5分16秒）</li>
+              <li>著書Amazonランキング6冠・発売前重版</li>
+              <li>講演実績：ソニー、自治体、教育機関、全国神社など多数</li>
+            </ul>
+            <p class="speaker-description">
+              独自に確立した「1分体操」は「動きやすくなる・前向きになれる・人生が好転する」と評判を呼び、SNSでの動画累計再生数は2億回を突破。パンデミックによって長年続けてきたアパレル13店舗が閉店、仕事ゼロの日々を経験。そこからSNS発信を開始し<span
+                class="highlight-yellow">「運動は運を動かす」</span>を信条に完全再起。身体・感情・脳科学を融合した独自メソッド<span
+                class="highlight-yellow">「純度高く生きる」</span>は、全国で支持を集め続けている。
+            </p>
+            <div class="speaker-book-row">
+              <img src="images/watanabebook.jpg" alt="1分で幸福に満たされる 巡りの法則" class="speaker-book-img">
+              <div class="speaker-book-info">
+                <p class="speaker-book-label">著書</p>
+                <p class="speaker-book-title">1分で幸福に満たされる 巡りの法則</p>
+                <p class="speaker-book-pub">徳間書店</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== 頑張ること＝正解という思い込み ========== -->
+  <section class="narrative-section">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center">「頑張ること＝正解」という思い込みが、<br><span class="text-gold serif">あなたの人生を止めている</span>
+      </h2>
+      <div class="narrative-text">
+        <p>正直に言います。</p>
+        <p>あなたが<span class="highlight-yellow">「もっと頑張ろう」</span>と思えば思うほど、<br>今の状況は変わりません。</p>
+      </div>
+      <div class="guarantee-box" style="margin:24px 0;">
+        <h3>今の停滞は「頑張りが足りないから」ではなく、<br><span class="highlight-yellow">「頑張りすぎているから」</span>起きているのです。</h3>
+      </div>
+      <div class="narrative-text">
+        <p>過剰な努力は、脳のリソースを奪います。<br>不要なことを抱えすぎると、<br>本当に大切なことへの集中力が失われます。</p>
+        <p><span class="highlight-yellow">「やめられない」「捨てられない」</span>が積み重なると、<br>人生が前に進まなくなります。</p>
+        <p><strong>これは「根性が足りない」のではなく、<br>構造的な問題です。</strong></p>
+        <p>マイクロソフトが週休3日を導入したとき、<br>労働生産性は40%向上しました。<br><span
+            class="highlight-yellow">「より少なく、より深く」</span>というアプローチが、<br>圧倒的な成果を生み出したのです。</p>
+      </div>
+      <div class="guarantee-box" style="margin:32px 0;border-color:var(--gold);">
+        <h3><span class="highlight-yellow">「頑張ること」</span>をやめて、<span
+            class="highlight-yellow">「捨てること」</span>を始めた人だけが<br>本当の意味での自由と成果を手に入れている。</h3>
+      </div>
+      <div class="narrative-text">
+        <p>渡邉さんは13店舗閉店というゼロからの再起で、<br>この真実を体得しました。</p>
+        <p>角谷さんは160社16万人のサポートを通じて、<br>この原理を数字で証明してきました。</p>
+        <p><strong>二人が語る「捨てることで人生が変わった」<br>リアルな体験と科学的根拠を、<br>今回初めて同じ場所でお伝えします。</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== この対談で手に入れられるもの ========== -->
+  <section class="benefit-section">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center">この対談ウェビナーで<br>手に入れられるもの</h2>
+      <p class="section-lead text-center">90分の特別対談で、以下の内容をお伝えします。</p>
+      <ul class="benefit-list">
+        <li><span class="highlight-yellow">「頑張るほど空回りする」</span>メカニズムと、今日から抜け出す最初の一歩</li>
+        <li>物・情報・人間関係・仕事──4領域別<span class="highlight-yellow">「捨てる基準」</span>の作り方</li>
+        <li>ギネス記録保持者が実践する<span class="highlight-yellow">「純度高く生きる」</span>哲学の具体的手順</li>
+        <li>渡邉さんが13店舗閉店という逆境から再起した<span class="highlight-yellow">「捨てることで開けた人生」</span>の実話</li>
+        <li>160社16万人が実証した<span class="highlight-yellow">「余白を作ると成果が上がる」</span>環境設計の秘密</li>
+        <li><span class="highlight-yellow">「やめていいこと」</span>リスト──今すぐ手放せる習慣・思考・行動パターン</li>
+        <li>頑張らなくても自然と前に進む<span class="highlight-yellow">「引き算の人生設計」</span>の全体像</li>
+      </ul>
+      <div class="problem-callout">
+        <p>これらすべてが</p>
+        <p class="emphasis" style="font-size:clamp(1.8rem,5vw,2.5rem);">完全無料</p>
+        <p>です。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container text-center">
+      <p class="form-date-label">📅 開催日時：2026年3月30日（月）20:00〜21:30</p>
+      <div class="reg-form-wrap">
+        <form action="https://www.forestpub.co.jp/mm/Register" method="post" class="reg-form-flex light">
+          <input type="hidden" name="UserID" value="forest">
+          <input type="hidden" name="MagazineID" value="13208">
+          <input type="hidden" name="ReferrerID" value="0">
+          <input type="hidden" name="Confirm" value="1">
+          <input type="email" name="Email" maxlength="50" placeholder="メールアドレスを入力" class="form-email-input" required>
+          <input type="submit" value="今すぐ無料登録する →" class="form-submit-btn">
+        </form>
+        <div class="reg-form-note">
+          メールアドレスに誤りがありますとご案内が届きません。入力間違いのないようご注意ください。<br>また、案内が届かない場合は再度ご登録ください。<br>登録後のアドレスはページ下部にある<a
+            href="#kiyaku">規約</a>にそって厳正に管理いたします。安心してご登録ください。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== こんな方にオススメ ========== -->
+  <section class="theme-section">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center">このウェビナーは<br>こんな方に<span class="text-gold serif">特にオススメ</span>です</h2>
+      <div class="theme-grid" style="grid-template-columns:1fr;">
+        <div class="theme-card" style="text-align:left;">
+          <ul class="benefit-list" style="margin:0;">
+            <li>頑張っているのに成果が出ず、疲弊感だけが残っている方</li>
+            <li>「捨てたい」ものがあるのに、踏ん切りがつかない方</li>
+            <li>タスクや人間関係を整理したいが、どこから手をつけていいかわからない方</li>
+            <li>「休むと罪悪感が出る」というパターンから抜け出したい方</li>
+            <li>もっと軽やかに、自分らしく生きたいと思っているすべての方</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== なぜ従来のアプローチでは変われないのか ========== -->
+  <section class="narrative-section">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center">なぜ「断捨離本」や「自己啓発セミナー」では<br><span class="text-gold serif">変われないのか</span></h2>
+      <div class="path-grid">
+        <div class="path-card left">
+          <h4>❌ 従来のアプローチの限界</h4>
+          <p>
+            <strong>断捨離本：</strong>「捨てる基準」を教えてくれるが、「なぜ捨てられないか」の根本に触れない<br><br>
+            <strong>自己啓発セミナー：</strong>「もっと頑張れ」と背中を押すが、頑張りすぎている人をさらに追い込む<br><br>
+            どちらも「やり方」は教えるが、<span class="highlight-yellow">「あり方」の転換ができない</span>
+          </p>
+        </div>
+        <div class="path-card right">
+          <h4>✅ 今回の対談が違う理由</h4>
+          <p>
+            <span class="highlight-yellow">「何を捨てるか」</span>よりも<span
+              class="highlight-yellow">「なぜ捨てられないか」</span>の心理的ブロックを解除する<br><br>
+            「頑張ることをやめる」という発想の転換を、実体験と実績データで腹落ちさせる<br><br>
+            <strong>ヨガの哲学×パフォーマンス科学</strong>という、これまでにない統合視点で語られる
+          </p>
+        </div>
+      </div>
+      <div class="narrative-text" style="margin-top:32px;">
+        <p><strong>知識を積み重ねるのではなく、<br>不要なものを手放す。</strong></p>
+        <p>その発想の転換こそが、<br>今回の対談が持つ最大の価値です。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== 渡邉さんのストーリー ========== -->
+  <section class="narrative-section alt">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center">13店舗閉店、仕事ゼロ。<br>渡邉有優美が<span class="text-gold serif">「手放して」つかんだもの</span></h2>
+      <div class="narrative-text">
+        <p>渡邉さんが今、SNSフォロワー29万人・<br>動画再生2億回という影響力を持つに至った背景には、<br>多くの人が知らないストーリーがあります。</p>
+        <p>ヨガウェアブランド「Aon Jasmine」を立ち上げ、<br>海外13店舗を展開するまでに成長させた。</p>
+        <p>しかしパンデミックによって、<br>そのすべてが失われた。</p>
+        <p><strong>仕事も、収入も、<br>これまで積み上げてきたキャリアも──<br>すべてがゼロになった日。</strong></p>
+        <p>多くの人ならここで<br>「また一から積み上げよう」と<br>必死になるでしょう。</p>
+        <p>しかし渡邉さんが選んだのは、<br>全く逆の道でした。</p>
+      </div>
+      <div class="guarantee-box" style="margin:32px 0;border-color:var(--gold);">
+        <h3>「失って初めて、<br>自分が抱え込みすぎていたことに気づいた。<br>手放したとき、<br>本当の自分がスタートできた」</h3>
+        <p style="text-align:right;margin-top:12px;">── 渡邉有優美</p>
+      </div>
+      <div class="narrative-text">
+        <p><span class="highlight-yellow">「頑張ること」</span>をやめて、<br><span
+            class="highlight-yellow">「本当に必要なもの」</span>だけを選んだとき──</p>
+        <p>人生は驚くほどシンプルに、<br>そして力強く動き始めました。</p>
+        <p>そして角谷さんもまた、<br>神戸市役所時代に<br><span
+            class="highlight-yellow">「もっとやらなければ」</span>という思考に<br>縛られていた自分を手放すことで、<br>160社16万人を変えるコーチへと<br>変貌を遂げています。</p>
+        <p><strong>二人の「捨てることで人生が変わった」<br>リアルストーリーを、<br>この対談で余すことなくお伝えします。</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== ウェビナー詳細 ========== -->
+  <section class="event-section">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center mb-5">ウェビナー詳細</h2>
+      <div class="session-card">
+        <div class="session-card-header"><span class="session-num">「捨てる力」が人生を加速させる 90分の特別対談</span></div>
+        <h4 style="color:var(--white);font-family:'Shippori Mincho',serif;font-size:1.15rem;margin-bottom:8px;">渡邉有優美 ×
+          角谷リョウ</h4>
+        <p class="session-theme"><span class="highlight-yellow">「頑張るのをやめたら、すべてがうまくいく。〜「捨てる力」が人生を加速させる〜」</span></p>
+        <table class="event-table" style="margin-top:16px;">
+          <tr>
+            <th>テーマ</th>
+            <td>頑張るのをやめたら、すべてがうまくいく。<br>〜「捨てる力」が人生を加速させる〜</td>
+          </tr>
+          <tr>
+            <th>日時</th>
+            <td>2026年3月30日（月）20:00〜21:30</td>
+          </tr>
+          <tr>
+            <th>形式</th>
+            <td>オンライン（Zoom）</td>
+          </tr>
+          <tr>
+            <th>参加費</th>
+            <td><strong style="color:var(--gold-light);font-size:1.2rem;">完全無料</strong></td>
+          </tr>
+          <tr>
+            <th>録画視聴</th>
+            <td>なし（ライブ限定配信・アーカイブはありません）</td>
+          </tr>
+          <tr>
+            <th>定員</th>
+            <td>制限なし</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 特別特典セクション（非表示） -->
+
+  <!-- ========== なぜ完全無料なのか ========== -->
+  <section class="narrative-section">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center">これだけの内容が<br><span class="text-gold serif">なぜ完全無料なのか</span></h2>
+      <div class="narrative-text">
+        <p>通常、このレベルの対談ウェビナーであれば、<br>数万円の参加費がかかります。</p>
+        <p>しかし、今回は完全無料で提供します。</p>
+        <p>理由は簡単です。<br>より多くの方に、<br><span class="highlight-yellow">「頑張ることをやめたほうがうまくいく」</span>という<br>発想の転換を体験していただきたいからです。
+        </p>
+        <p>無料だからといって、<br>手を抜くことは一切ありません。<br>むしろ、有料セミナー以上の<br>価値を提供する覚悟で臨みます。</p>
+        <p>ウェビナー後に本格的なプログラムの<br>ご案内をさせていただく場合がありますが、<br>参加は完全に任意です。<br>無理な勧誘は一切ありません。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== FAQ ========== -->
+  <section class="faq-section">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center mb-5">よくあるご質問にお答えします</h2>
+      <div class="faq-item">
+        <div class="faq-q">Q1. 本当に完全無料ですか？</div>
+        <div class="faq-a">A.
+          はい、完全無料です。今回のウェビナーに関して、一切の費用は発生しません。ウェビナー後に本格的なプログラムのご案内をさせていただく場合がありますが、参加は完全に任意です。無理な勧誘は一切ありません。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q2. 当日参加できない場合はどうなりますか？</div>
+        <div class="faq-a">A. 申し訳ございませんが、今回はアーカイブ配信の予定はありません。一度きりのライブ限定対談となりますので、ぜひ当日リアルタイムでご参加ください。
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q3. ヨガやコーチングの経験がなくても参加できますか？</div>
+        <div class="faq-a">A. もちろんです。専門知識は一切不要です。<span
+            class="highlight-yellow">「頑張っているのに何かが停滞している」</span>と感じているすべての方に、すぐに使えるヒントをお届けします。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q4. 「頑張りすぎ」とは思っていないのですが、参加する意味はありますか？</div>
+        <div class="faq-a">A. あります。<span
+            class="highlight-yellow">「頑張りすぎ」</span>かどうかよりも、「今より少ない努力で、今より大きな成果を出せるか」という視点で参加していただければ十分です。捨てる力を知るだけで、人生の選択の質が根本から変わります。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 今すぐ登録すべき3つの理由 ========== -->
+  <section class="theme-section">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center">今すぐ登録すべき<span class="text-gold serif">3つの理由</span></h2>
+      <div class="theme-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+        <div class="theme-card">
+          <span class="theme-icon">🆓</span>
+          <h4>理由1：完全無料</h4>
+          <p>SNS再生2億回の人気講師と、160社16万人を変えたコーチの対談が、完全無料。リスクはゼロです。</p>
+        </div>
+        <div class="theme-card">
+          <span class="theme-icon">✨</span>
+          <h4>理由2：初の統合対談</h4>
+          <p>ヨガの哲学×パフォーマンス科学という、これまでにない統合視点。この二人が同時に無料で登壇する機会は極めて稀です。</p>
+        </div>
+        <div class="theme-card">
+          <span class="theme-icon">🔴</span>
+          <h4>理由3：アーカイブなし・一度きりの開催</h4>
+          <p>今回の対談はライブ限定配信。録画や見逃し配信の予定はありません。<strong>この日、この時間だけの一度きりの機会です。</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 分岐点 ========== -->
+  <section class="narrative-section">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title text-center">あなたは今、<br><span class="text-gold serif">分岐点に立っています</span></h2>
+      <div class="path-grid">
+        <div class="path-card left">
+          <h4>【このまま続ける道】</h4>
+          <p>
+            「もっと頑張らなければ」と自分を追い込み続ける。<br>
+            捨てたいものを抱えたまま、停滞感の中で同じ毎日を繰り返す。<br>
+            半年後も1年後も、「頑張っているのに変わらない」という虚しさが続く。
+          </p>
+        </div>
+        <div class="path-card right">
+          <h4>【今すぐ登録する道】</h4>
+          <p>
+            渡邉有優美×角谷リョウの対談で<span class="highlight-yellow">「捨てる力」</span>の本質を知る。<br>
+            頑張らなくても自然と前に進む<span class="highlight-yellow">「引き算の人生設計」</span>を手に入れる。<br>
+            完全無料・リスクゼロで、今日から変化が始まる。
+          </p>
+        </div>
+      </div>
+      <div class="narrative-text text-center" style="margin-top:32px;">
+        <p><strong style="font-size:1.3rem;">答えは明白です。</strong></p>
+        <p>「後で登録しよう」と思った瞬間、<br>あなたは左の道を選んだことになります。</p>
+        <p><strong style="font-size:1.2rem;">今この瞬間の30秒の行動が、<br>半年後の自分を決めます。</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 最終CTA ========== -->
+  <section class="cta-section" style="padding:80px 20px;">
+    <div class="container">
+      <h2 class="section-title text-center">今すぐ、下の登録フォームから<br>お申し込みください</h2>
+      <div class="narrative-text dark-text" style="text-align:left;margin-bottom:32px;">
+        <p>あなたが今この瞬間に<br>すべきことは明白です。<br>下の登録フォームに<br>メールアドレスを入力し、<br>送信するだけ。</p>
+        <p>たったそれだけで、<br><span
+            class="highlight-yellow">「捨てる力」</span>の本質を知り、<br>頑張らなくても自然と前に進む<br>人生設計を手に入れる<br>チャンスが訪れます。</p>
+        <p><strong style="font-size:1.3rem;">完全無料。</strong><br>リスクはゼロ。<br>得られるものは、<br>計り知れません。</p>
+      </div>
+      <div class="text-center">
+        <p class="form-date-label">📅 開催日時：2026年3月30日（月）20:00〜21:30</p>
+        <div class="reg-form-wrap">
+          <form action="https://www.forestpub.co.jp/mm/Register" method="post" class="reg-form-flex light">
+            <input type="hidden" name="UserID" value="forest">
+            <input type="hidden" name="MagazineID" value="13208">
+            <input type="hidden" name="ReferrerID" value="0">
+            <input type="hidden" name="Confirm" value="1">
+            <input type="email" name="Email" maxlength="50" placeholder="メールアドレスを入力" class="form-email-input" required>
+            <input type="submit" value="無料ウェビナーに今すぐ登録する →" class="form-submit-btn">
+          </form>
+          <div class="reg-form-note">
+            メールアドレスに誤りがありますとご案内が届きません。入力間違いのないようご注意ください。<br>また、案内が届かない場合は再度ご登録ください。<br>登録後のアドレスはページ下部にある<a
+              href="#kiyaku">規約</a>にそって厳正に管理いたします。安心してご登録ください。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== P.S. ========== -->
+  <section class="ps-section">
+    <div class="container">
+      <div class="narrative-text">
+        <p class="ps-label">P.S.</p>
+        <p>まだ迷っていますか？<br>それは当然です。</p>
+        <p>しかし今回は完全無料。<br>リスクはゼロです。</p>
+        <p>もし参加して<span class="highlight-yellow">「自分には合わなかった」</span>と<br>感じたとしても、何も失いません。</p>
+        <p>しかし、もし参加しなければ──</p>
+        <p><strong>「あの対談が、頑張りすぎる人生を変える<br>きっかけになったかもしれない」<br>という後悔だけが残ります。</strong></p>
+        <p>ここまで読んでくださったということは、<br>あなたは本気で変わりたいと思っているはずです。</p>
+        <p>その直感を、<br>どうか行動に変えてください。</p>
+      </div>
+      <div class="text-center" style="margin:24px 0;">
+        <p class="form-date-label">📅 開催日時：2026年3月30日（月）20:00〜21:30</p>
+        <div class="reg-form-wrap">
+          <form action="https://www.forestpub.co.jp/mm/Register" method="post" class="reg-form-flex">
+            <input type="hidden" name="UserID" value="forest">
+            <input type="hidden" name="MagazineID" value="13208">
+            <input type="hidden" name="ReferrerID" value="0">
+            <input type="hidden" name="Confirm" value="1">
+            <input type="email" name="Email" maxlength="50" placeholder="メールアドレスを入力" class="form-email-input" required>
+            <input type="submit" value="今すぐ無料登録する →" class="form-submit-btn">
+          </form>
+          <div class="reg-form-note">
+            メールアドレスに誤りがありますとご案内が届きません。入力間違いのないようご注意ください。<br>また、案内が届かない場合は再度ご登録ください。<br>登録後のアドレスはページ下部にある<a
+              href="#kiyaku">規約</a>にそって厳正に管理いたします。安心してご登録ください。</div>
+        </div>
+      </div>
+      <div class="narrative-text text-center">
+        <p>角谷リョウ・渡邉有優美</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANIZER -->
+  <section class="organizer-section">
+    <div class="container">
+      <p class="organizer-logo">フォレスト出版株式会社</p>
+      <p>〒162-0824 東京都新宿区揚場町2-18 白宝ビル7F<br>お問い合わせ：<a href="mailto:club@forestpub.jp">club@forestpub.jp</a></p>
+    </div>
+  </section>
+
+  <!-- KIYAKU -->
+  <div class="kiyaku smb20" id="kiyaku">
+    <span class="str" style="font-weight:700;color:rgba(255,255,255,0.85);">【規約】</span><br>
+    ディスクレーマー<br>
+    ※本ウェビナーでご紹介する内容（ヨガ・パフォーマンス向上・習慣改善・ストレス軽減など）は、一般的な生活習慣の改善および自己啓発を目的とした情報提供です。医療行為・診断・治療を目的とするものではありません。特定の疾患・症状の治療・予防・診断を保証するものではなく、また効果には個人差があります。体調不良や疾患をお持ちの方は、必ず医師・医療機関にご相談のうえ、ご自身の判断と責任においてご参加ください。<br><br>
+    ご登録いただいたお客様の個人情報は、<a href="https://www.forestpub.co.jp/privacy.cfm"
+      style="color:rgba(255,255,255,0.7);">フォレスト出版株式会社</a>で責任をもって管理させていただきます。ご登録頂きますと、事務局より無料ビデオの案内や会員制コンテンツなどのご案内をお送りいたします。また、フォレスト出版株式会社が発行するメールマガジンに登録されます。解除はいつでも可能です。なお弊社でご提供するサービスは利益の保証を行うものではありません。当社個人情報保護方針（プライバシーポリシー）につきましては<a
+      href="https://www.forestpub.co.jp/privacy.cfm"
+      style="color:rgba(255,255,255,0.7);">https://www.forestpub.co.jp/privacy.cfm</a>をご覧ください。ご登録頂いた方には、両社の個人情報保護方針（プライバシーポリシー）に同意頂けた事とさせて頂きますので、予めご了承くださいませ。ご登録頂いた場合は、この点に同意頂いた事とさせて頂きます。このプレゼントで示された表現や再現性には個人差があり、必ずしも利益や効果を保証したものではございません。
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="spt15"><a href="https://www.forestpub.co.jp/company.cfm"
+        target="_blank">会社概要</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.forestpub.co.jp/specifictrade.cfm"
+        target="_blank">特定商取引に基づく表記</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.forestpub.co.jp/privacy.cfm"
+        target="_blank">プライバシーポリシー</a></div>
+    <span class="fontS">© Forest Publishing Co., Ltd. All Rights Reserved.</span>
+  </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <div class="floating-cta-inner">
+      <p class="floating-cta-label">━━ 3/30（月）20:00〜21:30 無料ウェビナー ━━</p>
+      <form action="https://www.forestpub.co.jp/mm/Register" method="post" class="floating-cta-form">
+        <input type="hidden" name="UserID" value="forest">
+        <input type="hidden" name="MagazineID" value="13208">
+        <input type="hidden" name="ReferrerID" value="0">
+        <input type="hidden" name="Confirm" value="1">
+        <input type="email" name="Email" maxlength="50" placeholder="メールアドレスを入力" class="floating-cta-input" required>
+        <input type="submit" value="▼ 無料で参加する →" class="floating-cta-submit">
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
