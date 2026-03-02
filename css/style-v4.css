@@ -1151,7 +1151,7 @@ body {
   background: var(--blue-deep);
   color: rgba(255,255,255,0.4);
   text-align: center;
-  padding: 28px 20px;
+  padding: 28px 20px 140px;
   font-size: 0.75rem;
 }
 
